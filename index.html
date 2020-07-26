@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos App</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="bg-success text-white p-4 mb-3">
@@ -23,17 +24,17 @@
         <div>
           <h4>My Activity list</h4>
           <hr />
+          <!--Test-->
           <ul class="list-group">
             <li class="list-group-item">
-              Wash the dishes
-            </li>
-            <li class="list-group-item">
-              Cook
-            </li>
-            <li class="list-group-item">
-              Mow the lawn
+              <div class="activity-item">
+                <span>Clean my hair</span>
+                <button class="btn btn-danger" onclick="deleteActivityFromArray()">Delete</button>
+              </div>
             </li>
           </ul>
+          <!-- End Test -->
+          <ul id="activity-list" class="list-group"></ul>
         </div>
       </div>
     </div>
