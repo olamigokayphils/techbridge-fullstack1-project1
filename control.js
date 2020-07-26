@@ -69,10 +69,6 @@ let activityList = [
   },
 ];
 
-function deleteActivityFromArray() {
-  window.alert("Delete");
-}
-
 const activityListParentElement = document.querySelector("#activity-list");
 
 function mapArrayToDOM() {
@@ -95,7 +91,10 @@ function mapArrayToDOM() {
     deleteActivityButton.className = "btn btn-danger";
     deleteActivityButton.type = "button";
     deleteActivityButton.textContent = "Delete";
-    deleteActivityButton.onclick = `${deleteActivityFromArray()}`;
+    deleteActivityButton.onclick = function () {
+      //This is an Anonymous Function
+      alert(`Delete ${activityList[index].title} ?`);
+    };
 
     //APPEND TITLE SPAN & DELETE BUTTON TO 'INNER CHILD DIV'
     activityItemDiv.appendChild(titleSpan);
